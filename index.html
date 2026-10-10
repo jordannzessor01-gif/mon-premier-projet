@@ -3,62 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mon Premier Projet</title>
+  <title>Todo List</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">MonProjet</div>
-      <ul class="nav-links">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="app">
+    <div class="header">
+      <p class="eyebrow">Organisation</p>
+      <h1>Ma Todo List</h1>
+    </div>
 
-  <main>
-    <section id="accueil" class="hero">
-      <div class="hero-content">
-        <h1>Bienvenue sur mon projet GitHub</h1>
-        <p>Un site simple et moderne pour commencer</p>
-        <button class="btn" id="btnAction">Cliquez-moi</button>
-      </div>
-    </section>
+    <form id="todo-form" class="todo-form">
+      <input
+        id="todo-input"
+        type="text"
+        placeholder="Ajouter une tâche..."
+        aria-label="Ajouter une tâche"
+        required
+      />
+      <button type="submit">Ajouter</button>
+    </form>
 
-    <section id="apropos" class="about">
-      <h2>À propos</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>🚀 Rapide</h3>
-          <p>Un site léger et rapide à charger</p>
-        </div>
-        <div class="card">
-          <h3>💻 Moderne</h3>
-          <p>Conçu avec les standards web actuels</p>
-        </div>
-        <div class="card">
-          <h3>📱 Responsive</h3>
-          <p>Fonctionne parfaitement sur tous les appareils</p>
-        </div>
-      </div>
-    </section>
+    <ul id="todo-list" class="todo-list"></ul>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Votre nom" required />
-        <input type="email" placeholder="Votre email" required />
-        <textarea placeholder="Votre message" rows="5" required></textarea>
-        <button type="submit" class="btn">Envoyer</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Mon Premier Projet GitHub</p>
-  </footer>
+    <div class="footer-row">
+      <span id="tasks-left">0 tâche(s) restante(s)</span>
+      <button id="clear-completed" class="secondary" type="button">
+        Supprimer terminées
+      </button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
